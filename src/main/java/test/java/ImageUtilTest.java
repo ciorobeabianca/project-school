@@ -1,3 +1,4 @@
+package test.java;
 
 /**
  * A test class for the ImageUtil.
