@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -104,7 +107,7 @@ public class FilterTest {
     Blur b = new Blur();
     IPixel pixExe = b.applyFilter(img, 0, 0);
     IPixel pixNew = new Pixel(5, 9, 5);
-    assertEquals(pixNew, pixExe);
+    Assert.assertEquals(pixNew, pixExe);
   }
 
 
@@ -114,10 +117,10 @@ public class FilterTest {
     IImage iBlur = img.blur();
     IPixel pixExe = iBlur.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(5, 9, 5);
-    assertEquals(pixNew, pixExe);
+    Assert.assertEquals(pixNew, pixExe);
     IPixel pixExe1 = iBlur.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(5, 9, 5);
-    assertEquals(pixNew1, pixExe1);
+    Assert.assertEquals(pixNew1, pixExe1);
   }
 
   // test blurring the model
@@ -126,10 +129,10 @@ public class FilterTest {
     IImage iBlur = imgModel1.blur("Image1");
     IPixel pixExe = iBlur.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(5, 9, 5);
-    assertEquals(pixNew, pixExe);
+    Assert.assertEquals(pixNew, pixExe);
     IPixel pixExe1 = iBlur.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(5, 9, 5);
-    assertEquals(pixNew1, pixExe1);
+    Assert.assertEquals(pixNew1, pixExe1);
   }
 
   // test for sharpening a pixel
@@ -138,7 +141,7 @@ public class FilterTest {
     Sharpen s = new Sharpen();
     IPixel pixExe = s.applyFilter(img, 0, 0);
     IPixel pixNew = new Pixel(16, 28, 16);
-    assertEquals(pixNew, pixExe);
+    Assert.assertEquals(pixNew, pixExe);
   }
 
   // test for the whole image
@@ -147,13 +150,13 @@ public class FilterTest {
     IImage iSharp = img.sharpen();
     IPixel pixExe = iSharp.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(16, 28, 16);
-    assertEquals(pixNew, pixExe);
+    Assert.assertEquals(pixNew, pixExe);
     IPixel pixExe1 = iSharp.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(16, 28, 16);
-    assertEquals(pixNew1, pixExe1);
+    Assert.assertEquals(pixNew1, pixExe1);
     IPixel pixExe2 = iSharp.getPixelAt(1, 1);
     IPixel pixNew2 = new Pixel(22, 28, 22);
-    assertEquals(pixNew2, pixExe2);
+    Assert.assertEquals(pixNew2, pixExe2);
   }
 
   // test for sharpening the model
@@ -162,13 +165,13 @@ public class FilterTest {
     IImage iSharp = imgModel1.sharpen("Image1");
     IPixel pixExe = iSharp.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(16, 28, 16);
-    assertEquals(pixNew, pixExe);
+    Assert.assertEquals(pixNew, pixExe);
     IPixel pixExe1 = iSharp.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(16, 28, 16);
-    assertEquals(pixNew1, pixExe1);
+    Assert.assertEquals(pixNew1, pixExe1);
     IPixel pixExe2 = iSharp.getPixelAt(1, 1);
     IPixel pixNew2 = new Pixel(22, 28, 22);
-    assertEquals(pixNew2, pixExe2);
+    Assert.assertEquals(pixNew2, pixExe2);
   }
 
 }

@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -97,7 +100,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgBright = new Image(arr);
 
-    assertEquals(imgModel1.brighten("Image1", 20), imgBright);
+    Assert.assertEquals(imgModel1.brighten("Image1", 20), imgBright);
 
   }
 
@@ -115,7 +118,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgDark = new Image(arr);
 
-    assertEquals(imgModel1.darken("Image1", 10), imgDark);
+    Assert.assertEquals(imgModel1.darken("Image1", 10), imgDark);
   }
 
   @Test
@@ -132,7 +135,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgVal = new Image(arr);
 
-    assertEquals(imgModel1.visualizeValue("Image2"), imgVal);
+    Assert.assertEquals(imgModel1.visualizeValue("Image2"), imgVal);
   }
 
   @Test
@@ -150,7 +153,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgInt = new Image(arr);
 
-    assertEquals(imgModel1.visualizeIntensity("Image2"), imgInt);
+    Assert.assertEquals(imgModel1.visualizeIntensity("Image2"), imgInt);
   }
 
   @Test
@@ -167,7 +170,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgInt = new Image(arr);
 
-    assertEquals(imgModel1.visualizeLuma("Image1"), imgInt);
+    Assert.assertEquals(imgModel1.visualizeLuma("Image1"), imgInt);
   }
 
   @Test
@@ -179,7 +182,7 @@ public class ImageModelImplTest {
     arr[1][1] = pix3;
     IImage imgFlip = new Image(arr);
 
-    assertEquals(imgModel1.flipHorizontally("Image1"), imgFlip);
+    Assert.assertEquals(imgModel1.flipHorizontally("Image1"), imgFlip);
   }
 
   @Test
@@ -191,7 +194,7 @@ public class ImageModelImplTest {
     arr[1][1] = pix2;
     IImage imgFlip = new Image(arr);
 
-    assertEquals(imgModel1.flipVertically("Image1"), imgFlip);
+    Assert.assertEquals(imgModel1.flipVertically("Image1"), imgFlip);
   }
 
   @Test
@@ -208,7 +211,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgRed = new Image(arr);
 
-    assertEquals(imgModel1.visualizeCompRGB("Image1", "Red"), imgRed);
+    Assert.assertEquals(imgModel1.visualizeCompRGB("Image1", "Red"), imgRed);
   }
 
   @Test
@@ -225,7 +228,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgGreen = new Image(arr);
 
-    assertEquals(imgModel1.visualizeCompRGB("Image2", "Green"), imgGreen);
+    Assert.assertEquals(imgModel1.visualizeCompRGB("Image2", "Green"), imgGreen);
   }
 
   @Test
@@ -242,7 +245,7 @@ public class ImageModelImplTest {
     arr[1][1] = pixel4;
     IImage imgBlue = new Image(arr);
 
-    assertEquals(imgModel1.visualizeCompRGB("Image1", "Blue"), imgBlue);
+    Assert.assertEquals(imgModel1.visualizeCompRGB("Image1", "Blue"), imgBlue);
   }
 
   @Test
@@ -261,12 +264,12 @@ public class ImageModelImplTest {
     IImage imgNew = new Image(arr);
 
     imgModel1.add("Image3", imgNew);
-    assertEquals(imgModel1.getKey("Image3"), imgNew);
+    Assert.assertEquals(imgModel1.getKey("Image3"), imgNew);
   }
 
   @Test
   public void testGetKey() {
-    assertEquals(img, imgModel1.getKey("Image1"));
+    Assert.assertEquals(img, imgModel1.getKey("Image1"));
   }
 }
 

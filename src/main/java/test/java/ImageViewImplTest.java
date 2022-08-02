@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,7 +36,7 @@ public class ImageViewImplTest {
     String finalOut = "Hello \n";
     tw.renderMessage("Hello ");
     tw.renderMessage("\n");
-    assertEquals(finalOut, ap.toString());
+    Assert.assertEquals(finalOut, ap.toString());
   }
 
   /**
@@ -65,7 +68,7 @@ public class ImageViewImplTest {
     ImageView v = new ImageViewImpl(out);
     try {
       v.renderMessage("Hello!");
-      fail();
+      Assert.fail();
     } catch (IOException e) {
       throw new IOException();
     }

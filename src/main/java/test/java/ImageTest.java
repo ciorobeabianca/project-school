@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -72,57 +75,57 @@ public class ImageTest {
 
   @Test(expected = IllegalArgumentException.class)
   public void testGetPixelAtExc() {
-    assertEquals(img.getPixelAt(-2, 0), pix7);
+    Assert.assertEquals(img.getPixelAt(-2, 0), pix7);
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void testGetPixelAtExc2() {
-    assertEquals(img2.getPixelAt(1, 3), pix7);
+    Assert.assertEquals(img2.getPixelAt(1, 3), pix7);
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void testGetPixelAtExc3() {
-    assertEquals(img.getPixelAt(4, 0), pix7);
+    Assert.assertEquals(img.getPixelAt(4, 0), pix7);
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void testGetPixelAtExc4() {
-    assertEquals(img.getPixelAt(0, -1), pix7);
+    Assert.assertEquals(img.getPixelAt(0, -1), pix7);
   }
 
   @Test
   public void testGetPixelAt() {
-    assertEquals(img.getPixelAt(2, 0), pix7);
+    Assert.assertEquals(img.getPixelAt(2, 0), pix7);
   }
 
   @Test
   public void testGetPixelAt2() {
-    assertEquals(img.getPixelAt(1, 0), pix4);
+    Assert.assertEquals(img.getPixelAt(1, 0), pix4);
   }
 
   @Test
   public void testGetPixelAt3() {
-    assertEquals(img.getPixelAt(0, 0), pix1);
+    Assert.assertEquals(img.getPixelAt(0, 0), pix1);
   }
 
   @Test
   public void testGetHeight() {
-    assertEquals(img.getHeight(), 3);
+    Assert.assertEquals(img.getHeight(), 3);
   }
 
   @Test
   public void testGetHeight2() {
-    assertEquals(img2.getHeight(), 2);
+    Assert.assertEquals(img2.getHeight(), 2);
   }
 
   @Test
   public void testGetWidth() {
-    assertEquals(img.getWidth(), 3);
+    Assert.assertEquals(img.getWidth(), 3);
   }
 
   @Test
   public void testGetWidth2() {
-    assertEquals(img2.getWidth(), 2);
+    Assert.assertEquals(img2.getWidth(), 2);
   }
 
 }

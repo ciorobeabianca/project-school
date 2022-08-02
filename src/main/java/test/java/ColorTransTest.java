@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -6,7 +9,6 @@ import java.util.Map;
 
 import controller.GreyScale;
 import controller.SepiaTone;
-
 import model.IImage;
 import model.IPixel;
 import model.Image;
@@ -89,7 +91,7 @@ public class ColorTransTest {
     SepiaTone b = new SepiaTone();
     IPixel pixExe = b.applyColorTrans(pix1);
     IPixel pixNew = new Pixel(16, 15, 11);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
   }
 
 
@@ -99,7 +101,7 @@ public class ColorTransTest {
     SepiaTone b = new SepiaTone();
     IPixel pixExe = b.applyColorTrans(pix4);
     IPixel pixNew = new Pixel(21, 19, 14);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
   }
 
 
@@ -109,15 +111,15 @@ public class ColorTransTest {
     IImage iSepia = img.sepiaTone();
     IPixel pixExe = iSepia.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(16, 15, 11);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
 
     IPixel pixExe1 = iSepia.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(16, 15, 11);
-    assertEquals(pixExe1, pixNew1);
+    Assert.assertEquals(pixExe1, pixNew1);
 
     IPixel pixExe2 = iSepia.getPixelAt(1, 1);
     IPixel pixNew2 = new Pixel(21, 19, 14);
-    assertEquals(pixExe2, pixNew2);
+    Assert.assertEquals(pixExe2, pixNew2);
   }
 
   // test sepiatone for the model
@@ -126,15 +128,15 @@ public class ColorTransTest {
     IImage iSepia = imgModel1.sepiaTone("Image1");
     IPixel pixExe = iSepia.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(16, 15, 11);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
 
     IPixel pixExe1 = iSepia.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(16, 15, 11);
-    assertEquals(pixExe1, pixNew1);
+    Assert.assertEquals(pixExe1, pixNew1);
 
     IPixel pixExe2 = iSepia.getPixelAt(1, 1);
     IPixel pixNew2 = new Pixel(21, 19, 14);
-    assertEquals(pixExe2, pixNew2);
+    Assert.assertEquals(pixExe2, pixNew2);
   }
 
 
@@ -144,7 +146,7 @@ public class ColorTransTest {
     GreyScale b = new GreyScale();
     IPixel pixExe = b.applyColorTrans(pix1);
     IPixel pixNew = new Pixel(14, 14, 14);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
   }
 
 
@@ -154,7 +156,7 @@ public class ColorTransTest {
     GreyScale b = new GreyScale();
     IPixel pixExe = b.applyColorTrans(pix4);
     IPixel pixNew = new Pixel(16, 16, 16);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
   }
 
   // test greyScale for the whole image
@@ -163,15 +165,15 @@ public class ColorTransTest {
     IImage iGrey = img.greyScale();
     IPixel pixExe = iGrey.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(14, 14, 14);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
 
     IPixel pixExe1 = iGrey.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(14, 14, 14);
-    assertEquals(pixExe1, pixNew1);
+    Assert.assertEquals(pixExe1, pixNew1);
 
     IPixel pixExe2 = iGrey.getPixelAt(1, 1);
     IPixel pixNew2 = new Pixel(16, 16, 16);
-    assertEquals(pixExe2, pixNew2);
+    Assert.assertEquals(pixExe2, pixNew2);
   }
 
   // test greyScale for the model
@@ -180,15 +182,15 @@ public class ColorTransTest {
     IImage iGrey = imgModel1.greyScale("Image1");
     IPixel pixExe = iGrey.getPixelAt(0, 0);
     IPixel pixNew = new Pixel(14, 14, 14);
-    assertEquals(pixExe, pixNew);
+    Assert.assertEquals(pixExe, pixNew);
 
     IPixel pixExe1 = iGrey.getPixelAt(0, 1);
     IPixel pixNew1 = new Pixel(14, 14, 14);
-    assertEquals(pixExe1, pixNew1);
+    Assert.assertEquals(pixExe1, pixNew1);
 
     IPixel pixExe2 = iGrey.getPixelAt(1, 1);
     IPixel pixNew2 = new Pixel(16, 16, 16);
-    assertEquals(pixExe2, pixNew2);
+    Assert.assertEquals(pixExe2, pixNew2);
   }
 
 }

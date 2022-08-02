@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -81,8 +84,8 @@ public class ImageControlllerTest2 {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-blur");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgInt);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgInt);
 
   }
 
@@ -106,8 +109,8 @@ public class ImageControlllerTest2 {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-sharpen");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgInt);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgInt);
 
   }
 
@@ -131,8 +134,8 @@ public class ImageControlllerTest2 {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-sepia-tone");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgInt);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgInt);
 
   }
 
@@ -156,8 +159,8 @@ public class ImageControlllerTest2 {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-greyscale");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgInt);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgInt);
 
   }
 

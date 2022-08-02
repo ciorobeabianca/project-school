@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -130,8 +133,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup1 = model1.get("Image1-brighter");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup1, imgBright);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup1, imgBright);
 
   }
 
@@ -155,8 +158,8 @@ public class ImageControllerTest {
 
     IImage imgup2 = model1.get("Image1-darken");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgDark);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgDark);
   }
 
   @Test
@@ -174,8 +177,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-vertical-flip");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgFlip);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgFlip);
 
   }
 
@@ -195,8 +198,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-horizontal-flip");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgFlip);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgFlip);
 
   }
 
@@ -234,8 +237,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = imgModel1.getKey("ImageR-red-component");
 
-    assertEquals(img2, imgModel1.getKey("ImageR"));
-    assertEquals(imgup2, imgRed);
+    Assert.assertEquals(img2, imgModel1.getKey("ImageR"));
+    Assert.assertEquals(imgup2, imgRed);
   }
 
   @Test
@@ -258,8 +261,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-blue-component");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgBlue);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgBlue);
 
   }
 
@@ -283,8 +286,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-green-component");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgGreen);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgGreen);
 
   }
 
@@ -308,8 +311,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-value-component");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgVal);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgVal);
 
   }
 
@@ -334,8 +337,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-luma-component");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgInt);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgInt);
 
   }
 
@@ -360,8 +363,8 @@ public class ImageControllerTest {
     c.goCommands();
     IImage imgup2 = model1.get("Image1-intensity-component");
 
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup2, imgInt);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup2, imgInt);
 
   }
 
@@ -396,9 +399,9 @@ public class ImageControllerTest {
     IImage imgup1 = imgModel1.getKey("Image1-brighter");
     IImage imgup20 = imgModel1.getKey("Image1-vertical-flip");
 
-    assertEquals(imgup20, imgFlip);
-    assertEquals(img, model1.get("Image1"));
-    assertEquals(imgup1, imgBright);
+    Assert.assertEquals(imgup20, imgFlip);
+    Assert.assertEquals(img, model1.get("Image1"));
+    Assert.assertEquals(imgup1, imgBright);
 
   }
 

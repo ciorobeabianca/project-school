@@ -1,3 +1,6 @@
+package test.java;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -57,85 +60,85 @@ public class PixelTest {
 
   @Test
   public void testGetRed() {
-    assertEquals(pix1.getRed(), 23, 0.01);
+    Assert.assertEquals(pix1.getRed(), 23, 0.01);
   }
 
   @Test
   public void testGetRed2() {
-    assertEquals(pix2.getRed(), 13, 0.001);
+    Assert.assertEquals(pix2.getRed(), 13, 0.001);
   }
 
   @Test
   public void testGetBlue() {
-    assertEquals(pix3.getBlue(), 98, 0.001);
+    Assert.assertEquals(pix3.getBlue(), 98, 0.001);
   }
 
   @Test
   public void testGetBlue2() {
-    assertEquals(pix4.getBlue(), 60, 0.001);
+    Assert.assertEquals(pix4.getBlue(), 60, 0.001);
   }
 
   @Test
   public void testGetGreen() {
-    assertEquals(pix5.getGreen(), 53, 0.01);
+    Assert.assertEquals(pix5.getGreen(), 53, 0.01);
   }
 
   @Test
   public void testGetGreen2() {
-    assertEquals(pix4.getGreen(), 97, 0.01);
+    Assert.assertEquals(pix4.getGreen(), 97, 0.01);
   }
 
   @Test
   public void testVisualizeVal() {
-    assertEquals(pix1.visualizeVal(), new Pixel(67, 67, 67));
+    Assert.assertEquals(pix1.visualizeVal(), new Pixel(67, 67, 67));
   }
 
   @Test
   public void testVisualizeVal2() {
-    assertEquals(pix4.visualizeVal(), new Pixel(223, 223, 223));
+    Assert.assertEquals(pix4.visualizeVal(), new Pixel(223, 223, 223));
   }
 
   @Test
   public void testVisualizeIntensity() {
-    assertEquals(pix1.visualizeInt(), new Pixel(35, 35, 35));
+    Assert.assertEquals(pix1.visualizeInt(), new Pixel(35, 35, 35));
   }
 
   @Test
   public void testVisualizeLuma() {
     int luma = (int) (0.2126 * 145 + 0.7152 * 15 + 0.0722 * 98);
-    assertEquals(pix3.visualizeL(), new Pixel(luma, luma, luma));
+    Assert.assertEquals(pix3.visualizeL(), new Pixel(luma, luma, luma));
   }
 
   @Test
   public void testVisualizeLuma2() {
     int luma = (int) (0.2126 * 130 + 0.7152 * 53 + 0.0722 * 200);
-    assertEquals(pix5.visualizeL(), new Pixel(luma, luma, luma));
+    Assert.assertEquals(pix5.visualizeL(), new Pixel(luma, luma, luma));
   }
 
   @Test
   public void testVisualizeRed() {
-    assertEquals(pix4.visualizeRed(), new Pixel(223, 223, 223));
+    Assert.assertEquals(pix4.visualizeRed(), new Pixel(223, 223, 223));
   }
 
   @Test
   public void testVisualizeGreen() {
-    assertEquals(pix3.visualizeGreen(), new Pixel(15, 15, 15));
+    Assert.assertEquals(pix3.visualizeGreen(), new Pixel(15, 15, 15));
   }
 
   @Test
   public void testVisualizeBlue() {
-    assertEquals(pix2.visualizeBlue(), new Pixel(77, 77, 77));
+    Assert.assertEquals(pix2.visualizeBlue(), new Pixel(77, 77, 77));
   }
 
   @Test
   public void brightBy() {
     pix1.bright(10);
-    assertEquals(pix1, new Pixel(33, 25, 77));
+    Assert.assertEquals(pix1, new Pixel(33, 25, 77));
   }
 
   @Test
   public void darkBy() {
     pix2.dark(10);
-    assertEquals(pix2, new Pixel(3, 126, 67));
+    Assert.assertEquals(pix2, new Pixel(3, 126, 67));
   }
 }
