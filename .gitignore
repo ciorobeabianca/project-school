@@ -1,11 +1,7 @@
 # Project exclude paths
 /out/
 /target/**
-/res/
-/Assigm6.zip/
 /Assignment6.iml/
-/res.zip/
-/Assignment6.zip/
 /Assignment6.jar/
 
 
