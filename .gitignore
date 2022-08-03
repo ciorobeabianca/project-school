@@ -2,7 +2,8 @@
 .idea/
 /out/
 /target/**
-/Assignment6.iml/
+*.iml/
+
 
 
 
