@@ -2,8 +2,8 @@
 .idea/
 /out/
 /target/**
-.DS_Store/
 *.iml/
+.DS_Store/
 
 
 
